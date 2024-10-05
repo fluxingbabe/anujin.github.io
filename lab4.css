@@ -1,0 +1,172 @@
+body {
+  background-color: rgb(200, 195, 195);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  position: relative;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  max-width: 1000px;
+  min-height: 1200px;
+  margin: 50px, 0px, 50px, 0px;
+}
+.container .left {
+  position:relative;
+  background-color: rgb(79, 32, 126);
+  padding: 40px;
+  width: 30%;
+  float: left;
+  height: 1200px;
+}
+.profiletext {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+.zurag img {
+  width: 250px;
+  height: 320px;
+  align-items: center;
+  border: 0.2cm;
+}
+.profiletext h2 {
+  color: white;
+  font-size: 0.62cm;
+  margin-top: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4cm;
+}
+.profiletext h2 span {
+  font-size: 0.6cm;
+  font-weight: 300;
+  line-height: 0.5cm;
+}
+.contact {
+  padding-top: 40px;
+}
+.title {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+.contact ul {
+  position: relative;
+}
+.contact ul li {
+  position: relative;
+  list-style: none;
+  margin: 15px;
+  margin-left: 0;
+  cursor: pointer;
+}
+.contact ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size:18px;
+  color: rgb(254, 0, 153);
+}
+.contact ul li span {
+  color: white;
+  font-size: 16px;
+}
+.container .right {
+  position:relative;
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+  width: 70%;
+}
+.about {
+  margin-bottom: 50px;
+  margin-left: 100px;
+}
+.about:last-child {
+  margin-bottom: 0;
+}
+.about h1 {
+  color: rgb(79, 32, 126);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.about .box {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+  height: 40px;
+}
+
+.about .box .information {
+  min-width: 220px;
+}
+
+.about .box .information h4 {
+  text-transform: uppercase;
+  color: rgb(79, 32, 126);
+  font-weight: 400;
+  margin-left: 30px;
+}
+.about .box .text h5 {
+  text-transform: uppercase;
+  color:black;
+  font-weight: 500;
+  margin-right: 40px;
+}
+.skills .box {
+  position: relative;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.skills .box h4 {
+  text-transform: uppercase;
+  color: rgb(79, 32, 126);
+  font-weight: 400;
+  margin-left: 30px;
+}
+.skills .box .percent {
+  position: relative;
+  width: 90%;
+  height: 10px;
+  background-color: rgba(98, 94, 94, 0.415);
+}
+.skills .box .percent div {
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  background: rgb(79, 32, 126);
+}
+.interest ul {
+  display: grid;
+  grid-template-columns: repeat(3,2fr);
+}
+.interest ul li {
+  list-style: none;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  margin: 10px 0;
+}
