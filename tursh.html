@@ -1,36 +1,54 @@
-
 <!DOCTYPE html>
-<html>
-   <head>
-      <style>
-        body {
-          background: rgb(204,204,204); 
-          width: 21cm;
-          height: 29.7cm;
-          margin: 0 auto;
-        }
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Вэб Хуудас</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Миний Responsive Вэб</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Нүүр</a></li>
+                <li><a href="#about">Тухай</a></li>
+                <li><a href="#contact">Холбоо барих</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h2>Нүүр хуудас</h2>
+            <p>Энэ бол миний анхны responsive вэб хуудас.</p>
+        </section>
+        
+        <section id="about">
+            <h2>Тухай</h2>
+            <p>Энд миний тухай мэдээлэл байна.</p>
+        </section>
+        
+        <section id="contact">
+            <h2>Холбоо барих</h2>
+            <p>Энд холбоо барих мэдээлэл байна.</p>
+        </section>
 
-        page {
-          background: white;
-          display: block;
-          margin: 0 auto;
-          margin-bottom: 0.5cm;
-          position: relative;
-        }
+        <aside>
+            <h3>Нэмэлт мэдээлэл</h3>
+            <p>Энд та холбоотой мэдээлэл оруулж болно.</p>
+        </aside>
+    </main>
 
-        page[size="A4"] {  
-          width: 21cm;
-          height: 29.7cm; 
-        }
+    <footer>
+        <p>© 2024 Миний Вэбсайт</p>
+    </footer>
+</body>
+</html>
 
-        @page {
-          size: 21cm 29.7cm;
-          margin: 0mm;
-        }
-      </style>
-   </head>
-   <body>
-      <page size="A4">
-      </page>
-   </body>
+
+    <footer>
+        <p>© 2024 Миний Вэбсайт</p>
+    </footer>
+</body>
 </html>
