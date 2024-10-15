@@ -14,9 +14,10 @@ body {
 nav {
     grid-area: navbar;
     background-color: #1b1b6c;
-    height: 80px;
+    height: 100%;
     margin: 0;
     padding: 0;
+    grid-template-rows: auto;
 }
 nav img {
     float: left;
@@ -45,23 +46,180 @@ nav ul li a {
     font-size: 20px;
     font-weight: 25px;
     margin: 0;
+    justify-content: center;
 }
 nav ul li a:hover {
-    background-color: rgb(190, 127, 237);
+    background-color: rgb(255, 255, 255);
     transform: scale(1.15);
+    color: black;
 }
 header {
     grid-area: header;
     background-color: #13124f;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
+header h1, h2 {
+    display: flex;
+    margin-left: 20px;
+    color: white;
+}
+header .box {
+    margin: 20px;
+    width: 100px;
+    height: 25px;
+    background-color: #f61067;
+}
+header .box h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.45cm;
+    font-weight: 250;
+}
+
 main {
     grid-area: main;
+    height: 100%;
+}
+main h1 {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    font-style: initial;
+    font-size: 1cm;
+    font-weight: 500;
+    color: black;
+}
+main h2 {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+    font-size: 0.5cm;
+    font-weight: 400;
+    color: black;
+    text-transform: uppercase;
+}
+main .iframe-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+}
+main p {
+    margin: 10px 20px 20px 20px;
 }
 aside {
     grid-area: aside;
 }
+aside .message {
+    margin: 40px 25px 20px 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87%;
+    height: 25px;
+    background-color: #f61067;
+}
+aside .message h5 {
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    color: white;
+    margin-left: 4px;
+}
+aside .message i {
+    color: white;
+}
+aside .note {
+    margin-top: 40px;
+    margin-left: 25px;
+    margin-right: 25px;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 87%;
+    height: 40px;
+    background-color: #9090a5;
+}
+aside .note h5 {
+    margin-left: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.34cm;
+    font-weight: 350;
+}
+aside .space {
+    position: relative;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 87%;
+    height: 200px;
+    background-color: #13124f;
+}
+aside .space .good {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+aside .space .indicate {
+    position: absolute;
+    margin-top: 50px;
+    left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 40px;
+    background-color: #352ba5;
+    border: 3px solid #9090a5;
+}
+aside .space .indicate p {
+    color: white;
+}
+aside .space .send {
+    position: absolute;
+    margin-top: 120px;
+    left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 86%;
+    height: 40px;
+    background-color: #f61067;
+}
+aside .space .send h5 {
+    color: white;
+}
 footer {
     grid-area: footer;
+    height: 100%;
+    background-color: #13124f;
+}
+footer h3 {
+    margin-left: 10px;
+    color: white;
+    align-items: center;
+}
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "navbar"
+        "header"
+        "main"
+        "aside"
+        "footer";
+    }
 }
