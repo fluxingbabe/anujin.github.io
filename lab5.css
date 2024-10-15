@@ -212,7 +212,7 @@ footer h3 {
     color: white;
     align-items: center;
 }
-@media (max-width: 480px) {
+@media (max-width: 700px) {
     body {
         grid-template-columns: 1fr;
         grid-template-areas: 
