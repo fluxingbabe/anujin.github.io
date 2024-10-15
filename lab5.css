@@ -212,7 +212,7 @@ footer h3 {
     color: white;
     align-items: center;
 }
-@media (max-width: 700px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     body {
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -221,5 +221,15 @@ footer h3 {
         "main"
         "aside"
         "footer";
+    }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    body {
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas: 
+        "navbar navber"
+        "header header "
+        "main aside"
+        "footer footer";
     }
 }
