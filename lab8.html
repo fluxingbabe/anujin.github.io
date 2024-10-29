@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laboratory 8</title>
+    </head>
+    <body></body>
+    <script>
+        var n, nVal, s = 0;
+        n = window.prompt("Utga oruul:");
+        nVal = parseInt(n);
+
+        while (nVal > 0) {
+            s = s * 10 + (nVal % 10);
+            nVal = math.floor(nVal / 10);
+        }
+
+        if (s == parseInt(n)) 
+            document.write("Palindrom");
+        else 
+            document.write("Palindrom bish");
+    </script>
+</html>
