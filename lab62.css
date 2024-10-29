@@ -20,6 +20,9 @@ a {
     background-color: black;
     height: 100%;
 }
+nav ul li a{
+    color:white;
+}
 nav ul { 
     color: white;
     list-style-type: none;
@@ -99,12 +102,15 @@ video {
     text-transform: uppercase;
 }
 section h2{
-    padding-top: 15px;
+    padding-top: 35px;
     padding-bottom: 20px;
     text-align: center;
     font-size: 3vmin;
     color: #000000;
     font-family: 'Times New Roman', Times, serif;
+}
+section h2 a {
+    color:#000000;
 }
 .container {
     display: flex;
