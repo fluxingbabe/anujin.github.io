@@ -25,23 +25,38 @@
             padding: 0;
             box-sizing: border-box;
         }
+        .navbar {
+            background: #f8f8f8; /* Example background */
+        }
+        .navbar ul {
+            list-style: none;
+        }
+        .navbar li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .footer {
+            background: #333; /* Example footer background */
+            color: #fff;
+            padding: 20px 0;
+        }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <ul>
             <li class="menu"><i class="fa fa-bars" aria-hidden="true"></i></li>
-            <li class="menu1">MENU</li>
+            <li class="menu1"><a href="#home">MENU</a></li>
             <li class="search"><i class="fa fa-search" aria-hidden="true"></i></li>
-            <li class="search1">SEARCH</li>
-            <li><h2 class="head">CHANEL</h2></li>
+            <li class="search1"><a href="#search">SEARCH</a></li>
+            <li><h2 class="head"><a href="#home">CHANEL</a></h2></li>
             <li class="hooson"></li>
-            <li class="call">CALL US</li>
+            <li class="call"><a href="#contact">CALL US</a></li>
             <li class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></li>
             <li class="user"><i class="fa fa-user" aria-hidden="true"></i></li>
         </ul>
     </nav>
-    <header>
+    <header id="home">
         <video autoplay muted loop src="jennie.mp4" width="100%" height="100%">
             <source src="jennie.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -60,22 +75,22 @@
         </div>
     </section>
     <section>
-        <h2>Eau de Parfum Purse Spray NO5</h2>
-        <div class="container">
+        <h2><a href="#no5">Eau de Parfum Purse Spray NO5</a></h2>
+        <div class="container" id="no5">
             <img src="no5.jpg" alt="CHANEL Eau de Parfum Purse Spray NO5 pink">
             <img src="no51.jpg" alt="CHANEL Eau de Parfum Purse Spray NO5 yellow">
             <img src="no52.jpg" alt="CHANEL Eau de Parfum Purse Spray NO5 white">
             <img src="no53.jpg" alt="CHANEL Eau de Parfum Purse Spray NO5 black">
         </div>
-        <h2 id="lesson">Eau de Parfum Purse Spray COCO</h2>
-        <div class="container">
+        <h2 id="lesson"><a href="#coco">Eau de Parfum Purse Spray COCO</a></h2>
+        <div class="container" id="coco">
             <img src="coco1.jpg" alt="CHANEL Eau de Parfum Purse Spray COCO pink">
             <img src="coco2.jpg" alt="CHANEL Eau de Parfum Purse Spray COCO black">
             <img src="coco3.jpg" alt="CHANEL Eau de Parfum Purse Spray COCO yellow">
             <img src="coco4.jpg" alt="CHANEL Eau de Parfum Purse Spray COCO white">
         </div>
-        <h2>Eau de Parfum Purse Spray BLEU for Men</h2>
-        <div class="container">
+        <h2><a href="#bleu">Eau de Parfum Purse Spray BLEU for Men</a></h2>
+        <div class="container" id="bleu">
             <img src="blue1.jpg" alt="CHANEL Eau de Parfum Purse Spray BLEU blue green">
             <img src="blue2.jpg" alt="CHANEL Eau de Parfum Purse Spray BLEU white">
             <img src="blue3.jpg" alt="CHANEL Eau de Parfum Purse Spray BLEU blue">
@@ -88,7 +103,7 @@
                 <div class="footer-col">
                     <h4>Help</h4>
                     <ul>
-                        <li><a href="#">You can call or mail us</a></li>
+                        <li><a href="#contact">You can call or mail us</a></li>
                         <li><a href="#">FAQ's</a></li>
                         <li><a href="#">Product Care</a></li>
                         <li><a href="#">Stores</a></li>
