@@ -63,7 +63,7 @@ header {
     color: aliceblue;
     text-align: center;
 }
-.header-content h2 {
+.header-content p {
     font-size: 4vmin;
     font-size: 7vmin;
     margin-top: 50px;
@@ -109,6 +109,13 @@ section h2{
 section h2 a {
     color:#000000;
 }
+section .texte {
+    padding-top: 35px;
+    padding-bottom: 20px;
+    font-size: 3vmin;
+    color: #000;
+    font-family: 'Times New Roman';
+}
 .container {
     display: flex;
     width: 100%;
@@ -153,7 +160,7 @@ footer{
     width: 25%;
     padding: 0 15px;
 }
-.footer-col h4 {
+.footer-col h4, h3 {
     font-size: 15px;
     color: #fff;
     text-transform: capitalize;
