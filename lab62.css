@@ -89,7 +89,7 @@ video {
 }
 
 /*--perfume--*/
-.title h1 title{
+.title h1{
     padding-top: 60px;
     padding-bottom: 30px;
     text-align: center;
@@ -115,6 +115,7 @@ section .texte {
     font-size: 3vmin;
     color: #000;
     font-family: 'Times New Roman';
+    
 }
 .container {
     display: flex;
