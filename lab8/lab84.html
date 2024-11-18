@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array</title>
+    </head>
+    <body></body>
+    <script>
+        var arr = new Array(5), array = new Array(5);
+        for(var i=0; i<arr.length; i++) {
+            arr[i]= window.prompt(i+"-r gishvvn: ");
+            array[i] = parseInt(arr[i]);
+        }
+        document.writeln(" Oruulsan massiw: "+array+" ");
+        function hbyh(a, b) {
+        var r, x, a1, b1;
+        a1 = a;
+        b1 = b;
+            while(a!=0 && b!=0) {
+            (a>b) ? a -= b : b-=a;
+            }
+            r=a+b;
+            x = (a1*b1)/r;
+            return x;
+       }
+        var m = array[0]; 
+        for(var i=0; i<array.length-1; i++) {
+            m = hbyh(m, array[i+1]);
+        }
+       document.writeln("Hamgiin baga Yrunhii Huwaagdagch: "+m);
+    </script>
+</html>

@@ -6,13 +6,12 @@
     <body></body>
     <script>
         var ch=25, tu=18, s, Sval, d, h, m, sec ;
-        s = window.prompt("Zai:");
+        s = window.prompt("Zai(metr):");
         sVal = parseFloat(s);
         d = ch - tu;
-        h = s/d;
-        m = math.floor(h/60);
-        sec = (h%60)*60;
-       console.log(m);
-       console.log(sec);
+        m = Math.floor((s*3.6/d)/60);
+        sec = Math.round((s*3.6/d)-m*60);
+       document.writeln(m+"minut");
+       document.write(sec+"secound"); 
     </script>
 </html>
