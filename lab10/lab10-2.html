@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Time</title>
+    </head>
+    <body>
+        <h1 id="1"></h1>
+    </body>
+    <script>
+        var time=30;
+        function decrease() {
+            var n = document.getElementById("1");
+            n.innerHTML = time;
+            if (time == 0) clearInterval(s);
+                time--;
+        }
+        var s = setInterval(decrease, 1000);
+    </script>
+</html>

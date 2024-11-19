@@ -5,15 +5,20 @@
     </head>
     <body></body>
     <script>
-        var n, nVal, s = 0;
+        var n, nVal, s = 0, m = 0;
         n = window.prompt("Utga oruul:");
         nVal = parseInt(n);
 
         while (nVal > 0) {
-            s = s * 10 + (nVal % 10);
+            s = s + (nVal % 10);
             nVal = Math.floor(nVal / 10);
         }
-        if (s == parseInt(n)) 
+        var q = s;
+        while (s > 0) {
+            m = m*10 + s % 10;
+            s = Math.floor(s / 10);
+        }
+        if (q == m) 
             document.write("Palindrom");
         else 
             document.write("Palindrom bish");

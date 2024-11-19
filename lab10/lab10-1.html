@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recursive</title>
+    </head>
+    <body></body>
+    <script>
+        n = window.prompt("Too: ");
+        n = parseInt(n);
+        function factriol(n) {
+            if (n==1) return 1;
+            else {
+                return (n*factriol(n-1));
+            }
+        }
+        document.write(n+" toonii factriol: "+factriol(n));
+    </script>
+</html>
