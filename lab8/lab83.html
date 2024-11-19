@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Gvitseh</title>
+        <title>Haalga</title>
     </head>
     <body></body>
     <script>
         var orts, daw, haal;
         n = window.prompt("Toot:");
-        nVal = parseInt(n);
-        orts=Math.ceil(n/36);
-        daw=Math.ceil((n%36)/4);
-        haal = n%4;
-        if(haal==0) haal=4;
-       document.writeln(orts+" ortsnii ");
-       document.writeln(daw+" dawhriin ");
-       document.writeln(haal + " haalga."); 
+        n = parseInt(n);
+        if(9*4*3>=n) {
+            orts=Math.ceil(n/36);
+            daw=Math.ceil((n%36)/4);
+            if(daw==0) daw = 9;
+            haal = n%4;
+            if(haal==0) haal=4;
+            document.writeln(orts+" ortsnii ");
+            document.writeln(daw+" dawhriin ");
+            document.writeln(haal + " haalga."); 
+        }
+        else document.writeln("Error");
     </script>
 </html>
