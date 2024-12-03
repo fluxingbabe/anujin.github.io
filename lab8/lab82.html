@@ -10,7 +10,7 @@
         sVal = parseFloat(s);
         d = ch - tu;
         m = Math.floor((s*3.6/d)/60);
-        sec = Math.round((s*3.6/d)-m*60);
+        sec = Math.ceil((s*3.6/d)-m*60);
        document.writeln(m+"minut");
        document.write(sec+"secound"); 
     </script>

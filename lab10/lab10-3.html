@@ -20,7 +20,7 @@
         }
         function setCookie(Attribute, Value) {
             var ExpireDate = new Date();
-            ExpireDate.setTime(ExpireDate.getTime() + (30*24*3600*1000));
+            ExpireDate.setTime(ExpireDate.getTime() + (24*3600*1000));
             document.cookie = Attribute + "=" + escape(Value) + ";expires=" + ExpireDate.toGMTString();
             console.log(getCookie('visit'));
         }
@@ -28,18 +28,16 @@
             var now = new Date();
             document.cookie = Attribute + "=; expires=" + now.toGMTString();
         }
-        var VisitCount = getCookie("visit");
-        if (VisitCount === "") {
+        var VisitCount = parseInt(getCookie("visit")) || 0;
+        if (VisitCount===0) {
             document.write("Welcome for the first time.");
-            setCookie("visit", 1);
         }
         else {
             console.log('test')
             VisitCount++;
             document.write(VisitCount+" udaadah orolt.");
-            setCookie("visit", VisitCount);
         }
-
+        setCookie("visit", VisitCount++);
     </script>
 </html>
 

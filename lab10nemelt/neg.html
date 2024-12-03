@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>laboratory</title>
+    <style>
+        #my-button {
+            margin-top: 200px;
+            position: relative;
+            float: left;
+            width: 400px;
+            height: 180px;
+        }
+        #canvas {
+            float: right;
+            margin-top: 200px;
+        }
+    </style>
+  </head>
+  <body>
+    <button id="my-button">Click me to change background color!</button>
+    <canvas id="canvas" width="1000" height="1000"></canvas>
+
+    <script>
+      const color = ['blue', 'black', '#85417B', 'pink', 'green', 'purple', 'white'];
+      let i = 3;
+      let drawing = false;
+
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      const button = document.getElementById("my-button");
+
+      button.addEventListener("mouseenter", startDrawing);
+      button.addEventListener("mouseleave", stopDrawing);  
+      button.addEventListener("mousemove", draw);
+      button.addEventListener("click", changeColor);
+      function startDrawing() {
+        drawing = true;
+        ctx.beginPath();
+        ctx.moveTo(event.ClientX, event.ClientY);
+        draw(event); 
+      }
+      function stopDrawing() {
+        drawing = false;
+      }
+      function draw(event) {
+        ctx.lineTo(event.offsetX, event.offsetY);
+        ctx.lineWidth = 5;
+        ctx.strokeStyle=color[i];
+        ctx.stroke();
+      }
+
+      function changeColor() {
+        document.body.style.backgroundColor = color[i];
+        i = (i + 1) % color.length;
+      } 
+    </script>
+  </body>
+</html>
+
