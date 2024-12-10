@@ -7,23 +7,24 @@ const canvas = document.getElementById("canvas");
 const resultText = document.getElementById("result-text");
 
 let options = {
-    Countries: [
-        "Algeria", "Argentina", "Australia", "Austria", "Bangladesh", "Belgium", "Botswana", "Brazil", "Bulgaria", "Canada", "China", "Colombia", "Cuba", "Djibouti", "Egypt", "Fiji", "France", "Georgia", "Germany", "Greece", "Hungary", "India", "Ireland", "Japan", "Kazakhstan", "Luxembourg", "Mexico", "Monaco", "Mongolia", "Korea", "Pakistan", "Philippines", "Portugal", "Russia", "Singapore", "Spain", "Thailand", "UnitedStatesOfAmerica" 
-    ],
-    Animals: [
-        "Dog", "Wolf", "Butterfly", "Squirrel", "Zebra", "Ant", "Cat", "Fish", "Penguin", "Snake", "Fox", "Giraffe", "Buffalo", "Rabbit", "Monkey", "Dolphin", "Lizard"
-    ],
-    Sports: [
-        "Football", "Archery", "Ath;etics", "Badminton", "Baseball", "Basketball", "Bowls", "Boxing", "Canoeing", "Cricket", "Cycling", "Darts", "Gymnastics", "Golf", "Handball", "Hockey", "Karate", "Rowing", "Tennis", "Taekwondo", "Volleyball", "Wrestling"
-    ],
+  Countries: [
+    "Algeria", "Argentina", "Australia", "Austria", "Bangladesh", "Belgium", "Botswana", "Brazil", "Bulgaria", "Canada", "China", "Colombia", "Cuba", "Djibouti", "Egypt", "Fiji", "France", "Georgia", "Germany", "Greece", "Hungary", "India", "Ireland", "Japan", "Kazakhstan", "Luxembourg", "Mexico", "Monaco", "Mongolia", "Korea", "Pakistan", "Philippines", "Portugal", "Russia", "Singapore", "Spain", "Thailand", "UnitedStatesOfAmerica" 
+],
+Animals: [
+    "Dog", "Wolf", "Butterfly", "Squirrel", "Zebra", "Ant", "Cat", "Fish", "Penguin", "Snake", "Fox", "Giraffe", "Buffalo", "Rabbit", "Monkey", "Dolphin", "Lizard"
+],
+Sports: [
+    "Football", "Archery", "Ath;etics", "Badminton", "Baseball", "Basketball", "Bowls", "Boxing", "Canoeing", "Cricket", "Cycling", "Darts", "Gymnastics", "Golf", "Handball", "Hockey", "Karate", "Rowing", "Tennis", "Taekwondo", "Volleyball", "Wrestling"
+]
 };
 
 let winCount = 0;
 let count = 0;
 
 let chosenWord = "";
+
 const displayOptions = () => {
-  optionsContainer.innerHTML += `<h3>Which topic do you want to play?</h3>`;
+  optionsContainer.innerHTML += `<h3>Please Select An Option</h3>`;
   let buttonCon = document.createElement("div");
   for (let value in options) {
     buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')">${value}</button>`;
@@ -44,7 +45,6 @@ const blocker = () => {
   newGameContainer.classList.remove("hide");
 };
 
-
 const generateWord = (optionValue) => {
   let optionsButtons = document.querySelectorAll(".options");
   optionsButtons.forEach((button) => {
@@ -60,12 +60,9 @@ const generateWord = (optionValue) => {
   let optionArray = options[optionValue];
   chosenWord = optionArray[Math.floor(Math.random() * optionArray.length)];
   chosenWord = chosenWord.toUpperCase();
-
   let displayItem = chosenWord.replace(/./g, '<span class="dashes">_</span>');
-
   userInputSection.innerHTML = displayItem;
 };
-
 const initializer = () => {
   winCount = 0;
   count = 0;
