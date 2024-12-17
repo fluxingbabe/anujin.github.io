@@ -26,15 +26,15 @@ if (itemId !== null) {
                 document.getElementById("content").textContent = "Мэдээ олдсонгүй!";
             }
         } else {
-            console.error("Алдаа гарлаа!");
+            console.error("Error!");
         }
     };
 
     xhr.onerror = function () {
-        console.error("Сүлжээний алдаа гарлаа.");
+        console.error("Error!");
     };
 
     xhr.send();
 } else {
-    document.getElementById("news-detail").textContent = "Буруу параметр!";
+    document.getElementById("news-detail").textContent = "Error!";
 }

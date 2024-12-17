@@ -10,34 +10,38 @@
         function getCookie(Attribute) {
             if (document.cookie.indexOf(Attribute+"=") == -1) { 
                 return "";
-            }
-            else {          
-                var begin = document.cookie.indexOf(Attribute+"=") + Attribute.length+1;       
+            } else {          
+                var begin = document.cookie.indexOf(Attribute+"=") + Attribute.length + 1;       
                 var end = document.cookie.indexOf(";", begin);
                 if (end == -1) end = document.cookie.length;
                 return unescape(document.cookie.substring(begin, end));
             }
         }
+
         function setCookie(Attribute, Value) {
             var ExpireDate = new Date();
-            ExpireDate.setTime(ExpireDate.getTime() + (24*3600*1000));
+            ExpireDate.setTime(ExpireDate.getTime() + (24 * 3600 * 1000)); // 1 day expiration
             document.cookie = Attribute + "=" + escape(Value) + ";expires=" + ExpireDate.toGMTString();
-            console.log(getCookie('visit'));
         }
+
         function delCookie(Attribute) {
             var now = new Date();
             document.cookie = Attribute + "=; expires=" + now.toGMTString();
         }
+
         var VisitCount = parseInt(getCookie("visit")) || 0;
-        if (VisitCount===0) {
+
+        // Increment visit count
+        VisitCount++;
+
+        // Display the current visit count
+        if (VisitCount === 1) {
             document.write("Welcome for the first time.");
+        } else {
+            document.write(VisitCount + " visits.");
         }
-        else {
-            console.log('test')
-            VisitCount++;
-            document.write(VisitCount+" udaadah orolt.");
-        }
-        setCookie("visit", VisitCount++);
+
+        // Update the cookie with the incremented visit count
+        setCookie("visit", VisitCount);
     </script>
 </html>
-

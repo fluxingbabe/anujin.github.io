@@ -9,7 +9,7 @@ xhr.onload = function () {
         if (items.length > 0) {
             const firstItem = items[0];
             const title = firstItem.getElementsByTagName("title")[0].textContent;
-            const pubDate = firstItem.getElementsByTagName("pubDate")[0].textContent;
+            const pubDate = (firstItem.getElementsByTagName("pubDate")[0].textContent);
             const link = firstItem.getElementsByTagName("link")[0].textContent;
             const breakingNewsHtml = `
                 <div class="breaking-news">

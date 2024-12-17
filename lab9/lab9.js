@@ -6,7 +6,7 @@ const newGameButton = document.getElementById("new-game-button");
 const canvas = document.getElementById("canvas");
 const resultText = document.getElementById("result-text");
 
-let options = {
+var options = {
   Countries: [
     "Algeria", "Argentina", "Australia", "Austria", "Bangladesh", "Belgium", "Botswana", "Brazil", "Bulgaria", "Canada", "China", "Colombia", "Cuba", "Djibouti", "Egypt", "Fiji", "France", "Georgia", "Germany", "Greece", "Hungary", "India", "Ireland", "Japan", "Kazakhstan", "Luxembourg", "Mexico", "Monaco", "Mongolia", "Korea", "Pakistan", "Philippines", "Portugal", "Russia", "Singapore", "Spain", "Thailand", "UnitedStatesOfAmerica" 
 ],
@@ -18,35 +18,35 @@ Sports: [
 ]
 };
 
-let winCount = 0;
-let count = 0;
+var winCount = 0;
+var count = 0;
 
-let chosenWord = "";
+var chosenWord = "";
 
 const displayOptions = () => {
   optionsContainer.innerHTML += `<h3>Please Select An Option</h3>`;
-  let buttonCon = document.createElement("div");
-  for (let value in options) {
+  var buttonCon = document.createElement("div");
+  for (var value in options) {
     buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')">${value}</button>`;
   }
   optionsContainer.appendChild(buttonCon);
 };
 
 const blocker = () => {
-  let optionsButtons = document.querySelectorAll(".options");
-  let letterButtons = document.querySelectorAll(".letters");
+  var optionsButtons = document.querySelectorAll(".options");
+  var letterButtons = document.querySelectorAll(".letters");
   optionsButtons.forEach((button) => {
     button.disabled = true;
   });
 
   letterButtons.forEach((button) => {
-    button.disabled.true;
+    button.disabled=true;
   });
   newGameContainer.classList.remove("hide");
 };
 
 const generateWord = (optionValue) => {
-  let optionsButtons = document.querySelectorAll(".options");
+  var optionsButtons = document.querySelectorAll(".options");
   optionsButtons.forEach((button) => {
     if (button.innerText.toLowerCase() === optionValue) {
       button.classList.add("active");
@@ -57,10 +57,10 @@ const generateWord = (optionValue) => {
   letterContainer.classList.remove("hide");
   userInputSection.innerText = "";
 
-  let optionArray = options[optionValue];
+  var optionArray = options[optionValue];
   chosenWord = optionArray[Math.floor(Math.random() * optionArray.length)];
   chosenWord = chosenWord.toUpperCase();
-  let displayItem = chosenWord.replace(/./g, '<span class="dashes">_</span>');
+  var displayItem = chosenWord.replace(/./g, '<span class="dashes">_</span>');
   userInputSection.innerHTML = displayItem;
 };
 const initializer = () => {
